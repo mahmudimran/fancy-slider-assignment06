@@ -80,7 +80,6 @@
             <span class="prev" onclick="changeItem(-1)"><i class="fas fa-chevron-left"></i></span>
             <span class="next" onclick="changeItem(1)"><i class="fas fa-chevron-right"></i></span>
             `;
-
             sliderContainer.appendChild(prevNext)
             document.querySelector('.main').style.display = 'block';
             // hide image aria
