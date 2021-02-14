@@ -30,9 +30,9 @@
             toggleSpinner(false);
           }
 
-          const searchKey = document.getElementById('search');
-          searchKey.addEventListener('keypress', function(event) {
-            if (event.key == 'Enter') {
+          const searchEnter = document.getElementById('search')
+          .addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
                 searchBtn.click();
             }
           })
@@ -97,7 +97,7 @@
             sliders.forEach(slide => {
                 let item = document.createElement('div')
                 item.className = "slider-item";
-                item.innerHTML = `<img class="w-100" src="${slide}" alt="">`;
+                item.innerHTML = `<img class="w-100" src="${slide}">`;
                 sliderContainer.appendChild(item)
             })
             changeSlide(0)
@@ -106,7 +106,7 @@
                 changeSlide(slideIndex);
             }, time);
           }
-          
+
           // change slider index 
           const changeItem = index => {
             changeSlide(slideIndex += index);
